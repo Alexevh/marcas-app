@@ -1,0 +1,28 @@
+
+
+<div class="post">
+
+  <ion-item lines="none">
+    <ion-label>
+      <h3>{{marca.usuario.nombre}}</h3>
+      <h5>{{marca.usuario.email}}</h5>
+    </ion-label>
+  </ion-item>
+
+
+
+  <!-- Mapa -->
+<app-mapa [coords]="marca.coords" *ngIf="marca.coords"></app-mapa>
+
+  
+
+  <ion-item lines="none">  
+      <ion-label text-wrap>Estado: {{marca.estado}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime displayFormat="DD / MM/ YYYY - hh:mm" value="{{marca.created}}"></ion-datetime>
+    </ion-item>
+
+</div>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light"> 
+  <!-- refresher -->
+  <ion-refresher slot="fixed" (ionRefresh)="refrescar($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+  <!-- posts -->
+  <app-marcas [marcas]="marcas"></app-marcas>
+  
+  
+  <!-- Infinite scroll-->
+  <ion-infinite-scroll threshold="150px" (ionInfinite)="siguiente($event)" [disabled]="habilitado">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Cargando mas posts...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
