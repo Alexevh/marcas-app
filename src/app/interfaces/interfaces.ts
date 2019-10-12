@@ -22,5 +22,6 @@ export interface Usuario {
     email?: string;
     password?: string;
     direccion?: string;
+    carnesalud?: Date;
 
 }

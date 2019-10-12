@@ -38,7 +38,9 @@ export class MarcasService  {
     if (pull) {
       this.paginaMarcas = 0;
     }
-
+    console.log('el valor de paginas es', this.paginaMarcas);
+    this.paginaMarcas++;
+    console.log('el valor de paginas sumado 1 es', this.paginaMarcas);
    
 
     
@@ -46,11 +48,53 @@ export class MarcasService  {
       "x-token": token
     });
 
-    this.paginaMarcas++;
+    
 
     return this.http.get<RespuestaMarcas>(
       `${URL}/marca/?pagina=${this.paginaMarcas}`,
       { headers }
     );
+  }
+
+
+  crearMarca( marca ) {
+
+    const headers = new HttpHeaders({
+      'x-token': this.usuarioService.token
+    });
+
+    return new Promise( resolve => {
+
+      this.http.post(`${ URL }/marca`, marca, { headers })
+        .subscribe( resp => {
+
+          this.nuevaMarca.emit( resp['marca'] );
+          resolve(true);
+        });
+    });
+
+
+
+  }
+
+
+  subirImagen( img: string ) {
+
+    const options: FileUploadOptions = {
+      fileKey: 'image',
+      headers: {
+        'x-token': this.usuarioService.token
+      }
+    };
+
+    const fileTransfer: FileTransferObject = this.fileTransfer.create();
+
+    fileTransfer.upload( img, `${ URL }/marca/upload`, options )
+      .then( data => {
+        console.log(data);
+      }).catch( err => {
+        console.log('error en carga', err);
+      });
+
   }
 }

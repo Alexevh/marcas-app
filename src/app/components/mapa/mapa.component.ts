@@ -26,8 +26,6 @@ export class MapaComponent implements OnInit {
       const lat = Number(latlng[0]);
       const lng = Number(latlng[1]);
 
-      const lat2= '-34.8258949'
-      const lng2= '-56.3404545'
   
   
       mapboxgl.accessToken =
@@ -35,12 +33,12 @@ export class MapaComponent implements OnInit {
       const  map = new mapboxgl.Map({
         container: this.mapa.nativeElement,
         style: "mapbox://styles/mapbox/streets-v11",
-        center: [lng2, lat2],
+        center: [lng, lat],
         zoom: 15
       });
   
       /* genero el marcador en las coordenadas */
-      const marker = new mapboxgl.Marker().setLngLat([lng2, lat2]).addTo(map);
+      const marker = new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
     }
 
 }
