@@ -15,6 +15,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
     Camera,
     ImagePicker,
     FileTransfer,
+    OneSignal,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
