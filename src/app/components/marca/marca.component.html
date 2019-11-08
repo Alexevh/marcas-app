@@ -1,28 +1,40 @@
 
 
-<div class="post">
+<div class="post" >
 
-  <ion-item lines="none">
-    <ion-label>
-      <h3>{{marca.usuario.nombre}}</h3>
-      <h5>{{marca.usuario.email}}</h5>
-    </ion-label>
+  <ion-item lines="none" color="primary" class="redondeado-arriba">
+      <ion-row >
+          <ion-col >             
+            <img src="../../assets/logo.png" class="img-chica"> 
+            <span class="titulo-sobre">
+                <b color="primary" class="espaciado verde-claro">{{marca.usuario.nombre}} - </b>
+                <b color="primary" class="espaciado verde-claro" >{{marca.usuario.email}}</b>
+            </span>
+          
+          </ion-col>      
+        </ion-row> 
   </ion-item>
 
 
 
   <!-- Mapa -->
-<app-mapa [coords]="marca.coords" *ngIf="marca.coords"></app-mapa>
+<app-mapa [coords]="marca.coords" *ngIf="marca.coords" ></app-mapa>
 
-  
+<ion-item lines="none" color="primary" class="redondeado-abajo">  
+    <ion-icon name="calendar" class="verde-claro icon-large espaciado"></ion-icon>
+    <ion-datetime displayFormat="DD / MM/ YYYY" value="{{marca.created}}" class="verde-claro"></ion-datetime>
+    <span  class="verde-claro icon-large espaciado"> - </span>
+    <ion-icon name="time"  class="verde-claro icon-large espaciado"></ion-icon>
+    <ion-datetime displayFormat="hh:mm" value="{{marca.created}}" class="verde-claro"></ion-datetime>
+  </ion-item>
 
-  <ion-item lines="none">  
-      <ion-label text-wrap>Estado: {{marca.estado}}</ion-label>
+    <ion-chip lines="none" color="primary" class="estado-sobre back-verde " *ngIf="marca.estado">
+        <ion-icon name="information-circle" class="verde-claro icon-large espaciado"></ion-icon>
+        <ion-label text-wrap class="verde-claro espaciado"><span class="verde-claro">{{marca.estado}}</span></ion-label> 
+    </ion-chip>
+ 
 
-    </ion-item>
-    <ion-item>
-      <ion-label>Fecha:</ion-label>
-      <ion-datetime displayFormat="DD / MM/ YYYY - hh:mm" value="{{marca.created}}"></ion-datetime>
-    </ion-item>
+   
+
 
 </div>

@@ -10,7 +10,7 @@
 
           <ion-row>
             <ion-col>
-              <img src="../../assets/av-1.png">
+              <img src="../../assets/logo.png">
             </ion-col>
           </ion-row>
         
@@ -19,20 +19,29 @@
               
                 <ion-list>
                   
-                  <ion-item>
-                    <ion-label>Email</ion-label>
+                  <ion-item >
+                    <!-- <ion-label>Email</ion-label> --> 
+                    
+                  
                     <ion-input name="email"
                                 type="email"
+                                class="back-verde"
                                 [(ngModel)]="loginUser.email"
-                                required></ion-input>
+                                
+                                required>
+                                <ion-icon name="mail" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
+                              </ion-input>
                   </ion-item>
 
                   <ion-item>
-                    <ion-label>Password</ion-label>
+                    <!--<ion-label>Password</ion-label> -->
+                    
                     <ion-input name="password"
                                 type="password"
                                 [(ngModel)]="loginUser.password"
-                                required></ion-input>
+                                class="back-verde"
+                                required>
+                                <ion-icon name="key" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                   </ion-item>
 
                 </ion-list>
@@ -42,9 +51,22 @@
           <ion-row>
             <ion-col>
               <ion-button type="submit"
-                          color="tertiary"
+                          color="primary"
+                       
                           shape="round">
-                Login
+                Ingresar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button shape="none"
+                          expand="full"
+                          size="small"
+                          fill="outline"
+                          color="primary"
+                          (click)="mostrarRegistro()">
+                Registrarme
               </ion-button>
             </ion-col>
           </ion-row>
@@ -91,41 +113,54 @@ meter el contenido en la variable del js que controla la pagina
             </ion-row>-->
             
             <form (ngSubmit)="registro(fregistro)" #fregistro="ngForm">
+              <h3>Nuevo usuario</h3>
+                <ion-row>
+                    <ion-col>
+                      <img src="../../assets/logo.png">
+                    </ion-col>
+                  </ion-row>
                 <ion-row>
                     <ion-col>
                         
                         <ion-list>
                             
-                            <ion-item>
-                            <ion-label>Email</ion-label>
+                            <ion-item>            
                             <ion-input name="email" 
                                         type="email"
+                                        class="back-verde"
                                         [(ngModel)]="registerUser.email"
-                                        required></ion-input>
+                                        required>
+                                        <ion-icon name="mail" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
+                                      </ion-input>
                             </ion-item>
 
                             <ion-item>
-                            <ion-label>Nombre</ion-label>
+                            
                             <ion-input name="nombre"
                                         type="text"
+                                        class="back-verde"
                                         [(ngModel)]="registerUser.nombre"
-                                        required></ion-input>
+                                        required>
+                                        <ion-icon name="contact" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                             </ion-item>
 
-                            <ion-item>
-                            <ion-label>Password</ion-label>
+                            <ion-item>                         
                             <ion-input name="password"
                                         type="password"
+                                        class="back-verde"
                                         [(ngModel)]="registerUser.password"
-                                        required></ion-input>
+                                        required>
+                                        <ion-icon name="key" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                             </ion-item>
 
                             <ion-item>
-                              <ion-label>Direccion</ion-label>
+                              
                               <ion-input name="direccion"
                                           type="text"
+                                          class="back-verde"
                                           [(ngModel)]="registerUser.direccion"
-                                          required></ion-input>
+                                          required>
+                                          <ion-icon name="home" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                               </ion-item>
 
                         </ion-list>
@@ -135,11 +170,24 @@ meter el contenido en la variable del js que controla la pagina
                 <ion-row>
                 <ion-col>
                     <ion-button type="submit"
-                                color="tertiary"
+                                color="primary"
                                 shape="round">
                         Crear usuario
                     </ion-button>
                 </ion-col>
+               
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-button shape="none"
+                            expand="full"
+                            size="small"
+                            fill="outline"
+                            color="primary"
+                            (click)="mostrarLogin()">
+                  Ingresar
+                </ion-button>
+            </ion-col>
             </ion-row>
             
             </form>
@@ -157,8 +205,10 @@ meter el contenido en la variable del js que controla la pagina
 
 
 <ion-footer no-border>
-  <ion-toolbar>
-    
+
+  <!-- 
+
+  <ion-toolbar>    
     <ion-row>
 
       <ion-col>
@@ -188,4 +238,7 @@ meter el contenido en la variable del js que controla la pagina
 
 
   </ion-toolbar>
+
+  -->
+
 </ion-footer>

@@ -24,3 +24,79 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.boton-redondo {
+    border-radius: 40% !important;
+}
+
+.redondeado-abajo{
+    border-bottom-left-radius: 45pt 20pt !important;
+    border-bottom-right-radius:45pt 20pt!important;
+}
+
+.redondeado-arriba{
+    border-top-left-radius: 45pt 20pt !important;
+    border-top-right-radius:45pt 20pt!important;
+}
+
+.verde-claro{
+
+    color: #6daf94;
+}
+
+.espaciado {
+    padding: 5px;
+}
+
+.verde-oscuro {
+    color: #29550E;
+}
+
+
+:root {
+    --ion-color-primary: #bae2d2;
+    --ion-color-secondary-rgb: 0,102,0;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255,255,255;
+    --ion-color-secondary-shade: #005a00;
+    --ion-color-secondary-tint: #29550E;
+  }
+
+  .back-verde {
+
+    background-color: #bae2d2 !important;
+}
+
+.relativa {
+    position: relative;
+}
+
+.absoluta {
+    position: absolute;
+    bottom: 40px;
+}
+
+.img-chica {
+    width: 50px;
+    height: 50x;;
+}
+
+.estado-sobre {
+    position: relative;
+    top: -130px;
+    left: 200px;
+    margin-bottom: -75px;
+}
+
+.titulo-sobre {
+    position: relative;
+    top: -20px;
+    left: 10px;
+    margin-bottom: -5px;
+}
+
+
+.estado {
+    width: 250px !important;
+    height: 50px !important;
+}
