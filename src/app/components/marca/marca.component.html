@@ -7,8 +7,8 @@
           <ion-col >             
             <img src="../../assets/logo.png" class="img-chica"> 
             <span class="titulo-sobre">
-                <b color="primary" class="espaciado verde-claro">{{marca.usuario.nombre}} - </b>
-                <b color="primary" class="espaciado verde-claro" >{{marca.usuario.email}}</b>
+                <b color="primary" class="espaciado verde-claro FuentePrincipal">{{marca.usuario.nombre}} - </b>
+                <b color="primary" class="espaciado verde-claro FuentePrincipal" >{{marca.usuario.email}}</b>
             </span>
           
           </ion-col>      
@@ -22,15 +22,15 @@
 
 <ion-item lines="none" color="primary" class="redondeado-abajo">  
     <ion-icon name="calendar" class="verde-claro icon-large espaciado"></ion-icon>
-    <ion-datetime displayFormat="DD / MM/ YYYY" value="{{marca.created}}" class="verde-claro"></ion-datetime>
+    <ion-datetime displayFormat="DD / MM/ YYYY" value="{{marca.created}}" class="verde-claro FuentePrincipal"></ion-datetime>
     <span  class="verde-claro icon-large espaciado"> - </span>
     <ion-icon name="time"  class="verde-claro icon-large espaciado"></ion-icon>
-    <ion-datetime displayFormat="hh:mm" value="{{marca.created}}" class="verde-claro"></ion-datetime>
+    <ion-datetime displayFormat="hh:mm" value="{{marca.created}}" class="verde-claro FuentePrincipal"></ion-datetime>
   </ion-item>
 
-    <ion-chip lines="none" color="primary" class="estado-sobre back-verde " *ngIf="marca.estado">
+    <ion-chip lines="none" color="primary" class="estado-sobre back-verde FuentePrincipal " *ngIf="marca.estado">
         <ion-icon name="information-circle" class="verde-claro icon-large espaciado"></ion-icon>
-        <ion-label text-wrap class="verde-claro espaciado"><span class="verde-claro">{{marca.estado}}</span></ion-label> 
+        <ion-label text-wrap class="verde-claro espaciado"><span class="verde-claro FuentePrincipal">{{marca.estado}}</span></ion-label> 
     </ion-chip>
  
 

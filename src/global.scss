@@ -55,7 +55,7 @@
 
 :root {
     --ion-color-primary: #bae2d2;
-    --ion-color-secondary-rgb: 0,102,0;
+    --ion-color-secondary: #6daf94;
     --ion-color-secondary-contrast: #ffffff;
     --ion-color-secondary-contrast-rgb: 255,255,255;
     --ion-color-secondary-shade: #005a00;
@@ -83,20 +83,32 @@
 
 .estado-sobre {
     position: relative;
-    top: -130px;
-    left: 200px;
+    top: -140px;
+    left: 180px;
     margin-bottom: -75px;
 }
 
 .titulo-sobre {
     position: relative;
     top: -20px;
-    left: 10px;
+    left: -10px;
     margin-bottom: -5px;
 }
 
 
 .estado {
-    width: 250px !important;
+    width: 20px !important;
     height: 50px !important;
+}
+
+@font-face {
+    font-family: 'Principal'; /*a name to be used later*/
+    src: url('./assets/fuentes/M15/beleren-bold_P1.01.ttf') format('truetype'); /*URL to font*/
+}
+
+/* Como estamos usando JQueryMobolie y Bootstrap tenemos que fijar a fuego las fuentes
+personalizadas o las sobreescribe*/
+.FuentePrincipal {
+    font-family: 'Principal';
+    
 }

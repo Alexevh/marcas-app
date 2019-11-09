@@ -1,13 +1,14 @@
 <ion-header no-border>
-  <ion-toolbar>
-    <ion-title>
+  <ion-toolbar color="primary" >
+    <ion-title color="secondary" class="FuentePrincipal">
       Marcar
     </ion-title>
 
     <ion-buttons slot="end">
-      <ion-button (click)="crearMarca()"
+      <ion-button (click)="crearMarca()" 
       [disabled]='marca.mensaje.length < 1 || cargandoGeo '
-                  color="primary"
+                  color="secondary"
+                  class="FuentePrincipal"
                   >
         Enviar marca
       </ion-button>
@@ -21,13 +22,14 @@
   <ion-list>
     
     <ion-item>
-      <ion-label position="floating">Observaciones</ion-label>
+  
+      <ion-icon name="create" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
       <ion-textarea [(ngModel)]="marca.mensaje"></ion-textarea>
     </ion-item>
 
     <ion-list>
       <ion-item>
-        <ion-label>Posición actual</ion-label>
+          <ion-icon name="globe" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
         <ion-spinner name="lines-small" *ngIf="cargandoGeo"></ion-spinner>
         <ion-toggle slot="end" [(ngModel)]="marca.posicion" (ionChange)="getGeoLocation()"></ion-toggle>
       </ion-item>
@@ -39,8 +41,10 @@
   <ion-row>
     <ion-col size="6">
       <ion-button expand="full"
+      class="FuentePrincipal"
                   shape="round"
-                  (click)="tomarFoto()">
+                  (click)="tomarFoto()"
+                  color="secondary">
         <ion-icon slot="start" name="camera"></ion-icon>
         Cámara
       </ion-button>
