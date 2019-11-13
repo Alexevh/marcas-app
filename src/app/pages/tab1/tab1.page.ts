@@ -18,7 +18,9 @@ export class Tab1Page {
   marca = {
     mensaje: "",
     coords: null,
-    posicion: false
+    posicion: false,
+    tipo: 'Entrada',
+    estado: 'Enviada'
   };
 
   constructor(
@@ -35,7 +37,9 @@ export class Tab1Page {
     this.marca = {
       mensaje: "",
       coords: null,
-      posicion: false
+      posicion: false,
+      tipo: 'Entrada',
+      estado: 'Enviada'
     };
 
     this.tempImages = [];
@@ -110,4 +114,14 @@ export class Tab1Page {
       }
     );
   }
+
+  marcarEntrada(){
+    this.marca.tipo = 'Entrada';
+  }
+
+  marcarSalida(){
+    this.marca.tipo = 'Salida';
+  }
+ 
+  
 }

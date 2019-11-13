@@ -17,6 +17,9 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

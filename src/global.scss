@@ -26,17 +26,17 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .boton-redondo {
-    border-radius: 40% !important;
+    border-radius: 50px !important;
 }
 
 .redondeado-abajo{
-    border-bottom-left-radius: 45pt 20pt !important;
-    border-bottom-right-radius:45pt 20pt!important;
+    border-bottom-left-radius: 25pt !important;
+    border-bottom-right-radius:25pt !important;
 }
 
 .redondeado-arriba{
-    border-top-left-radius: 45pt 20pt !important;
-    border-top-right-radius:45pt 20pt!important;
+    border-top-left-radius: 25px  !important;
+    border-top-right-radius: 25px !important;
 }
 
 .verde-claro{
@@ -84,7 +84,7 @@
 .estado-sobre {
     position: relative;
     top: -140px;
-    left: 180px;
+    left: 45%;
     margin-bottom: -75px;
 }
 
@@ -111,4 +111,9 @@ personalizadas o las sobreescribe*/
 .FuentePrincipal {
     font-family: 'Principal';
     
+}
+
+
+.margen-35 {
+   margin-left: 35%;
 }

@@ -1,6 +1,6 @@
-<ion-header no-border >
-  <ion-toolbar color="primary" >
-      <h1 class="espaciado verde-claro FuentePrincipal" >Actualizar perfil</h1>
+<ion-header no-border text-center  >
+  <ion-toolbar color="primary " >
+      <h1 class="espaciado verde-claro FuentePrincipal " >Actualizar perfil</h1>
     <ion-buttons slot="end" >
       <ion-button (click)="logout()"
                   color="danger">
@@ -56,7 +56,11 @@
                            <ion-icon name="home" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
               </ion-item>
               <ion-item>
-          
+              <ion-label class="FuentePrincipal" color="secondary">Vencimiento C/Salud: </ion-label>
+               <ion-datetime displayFormat="DD / MM/ YYYY" value="{{usuario.carnesalud}}" class="verde-claro FuentePrincipal"></ion-datetime>
+              </ion-item>
+              <ion-item>
+                
                 <ion-input name="carnesalud"
                            type="date"
                            [(ngModel)]="usuario.carnesalud"

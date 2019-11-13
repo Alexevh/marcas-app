@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://192.168.1.46:3000'
+  url: 'https://marcas-server.herokuapp.com'
 };
 
 /*
