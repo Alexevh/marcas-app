@@ -54,7 +54,10 @@
                           color="primary"
                         class="FuentePrincipal"
                           shape="round">
-                Ingresar
+                          <i [ngClass]="{'fa-sign-in': !loading, 'fa-refresh fa-spin': loading }"
+                          class="fa espaciado verde-oscuro">  </i>
+                          <span *ngIf="!loading" class="verde-oscuro FuentePrincipal">  Ingresar </span>
+                          <span *ngIf="loading" class="verde-oscuro FuentePrincipal">  Ingresando...</span> 
               </ion-button>
             </ion-col>
           </ion-row>
@@ -173,8 +176,12 @@ meter el contenido en la variable del js que controla la pagina
                     <ion-button type="submit"
                                 color="primary"
                                 shape="round"
+                                [disabled]="loading"
                                 class="FuentePrincipal">
-                        Crear usuario
+                                <i [ngClass]="{'fa-user-plus': !loading, 'fa-refresh fa-spin': loading }"
+                                class="fa espaciado verde-oscuro">  </i>
+                                <span *ngIf="!loading" class="verde-oscuro FuentePrincipal">  Registrarse </span>
+                                <span *ngIf="loading" class="verde-oscuro FuentePrincipal">  Registrando...</span> 
                     </ion-button>
                 </ion-col>
                

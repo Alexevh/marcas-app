@@ -15,6 +15,7 @@ export class Tab3Page {
   constructor(private servicioUsuario: UsuarioService, private uiservice: UiserviceService, private marcaservice: MarcasService ) {}
 
   usuario: Usuario ={}
+  loading = false;
 
   logout(){
     this.marcaservice.paginaMarcas =0;
@@ -30,13 +31,16 @@ export class Tab3Page {
   async actualizar(FActualizar: NgForm){
 
     if (FActualizar.invalid) {return;};
+    this.loading = true;
 
     const actualizado = await this.servicioUsuario.actualizarUsuario(this.usuario);
-    console.log('la actualizacion dio ', actualizado);
+    //console.log('la actualizacion dio ', actualizado);
 
     if (actualizado){
+      this.loading = false;
       this.uiservice.mostrarAlerta('Usuario actualizo con exito');
     } else {
+      this.loading = false;
       this.uiservice.mostrarAlerta('Error en la actualizacion');
     }
   }

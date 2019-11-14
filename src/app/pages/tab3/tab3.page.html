@@ -77,10 +77,14 @@
       <ion-row>
         <ion-col text-center>
           <ion-button type="submit"
+                      [disabled]="loading"
                       color="secondary"
                       class="FuentePrincipal"
                       shape="round">
-          Actualizar
+                      <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading }"
+                      class="fa espaciado verde-oscuro">  </i>
+                      <span *ngIf="!loading" class="verde-oscuro FuentePrincipal">  Actualizar </span>
+                      <span *ngIf="loading" class="verde-oscuro FuentePrincipal">  Actualizando...</span> 
         </ion-button>
       </ion-col>
     </ion-row>
