@@ -3,14 +3,14 @@
       <h1 class="espaciado verde-claro FuentePrincipal " >Actualizar perfil</h1>
     <ion-buttons slot="end" >
       <ion-button (click)="logout()"
-                  color="danger">
+                 class="verde-oscuro">
         <ion-icon slot="icon-only" name="exit"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="secondary-contrast">
 
   <ion-row class="top-20">
     <ion-col size="12" text-center>
@@ -27,35 +27,38 @@
       <ion-row>
         <ion-col>
           
-            <ion-list>
+            <ion-list lines='none' class="back-verde-claro">
               
-              <ion-item>
+              <ion-item color="secondary-contrast">
                               <ion-input name="email"
                            type="email"
                            [(ngModel)]="usuario.email"
                            class="back-verde FuentePrincipal"
+                           color="secondary-contrast"
                            required>
                            <ion-icon name="mail" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
               </ion-item>
 
-              <ion-item>     
+              <ion-item  color="secondary-contrast">      
                 <ion-input name="nombre"
                            type="text"
                            [(ngModel)]="usuario.nombre"
                            class="back-verde FuentePrincipal"
+                           color="secondary-contrast"
                            required>
                            <ion-icon name="contact" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
               </ion-item>
 
-              <ion-item>               
+              <ion-item  color="secondary-contrast">               
                 <ion-input name="direccion"
                            type="text"
                            [(ngModel)]="usuario.direccion"
                            class="back-verde FuentePrincipal"
+                           color="secondary-contrast"
                            required>
                            <ion-icon name="home" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
               </ion-item>
-              <ion-item>
+              <ion-item  color="secondary-contrast">
               <ion-label class="FuentePrincipal" color="secondary">Vencimiento C/Salud: </ion-label>
                <ion-datetime displayFormat="DD / MM/ YYYY" value="{{usuario.carnesalud}}" class="verde-claro FuentePrincipal"></ion-datetime>
               </ion-item>

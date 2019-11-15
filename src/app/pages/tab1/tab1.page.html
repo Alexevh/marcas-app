@@ -17,20 +17,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding color="secondary-contrast">
 
-  <ion-list>
+  <ion-list lines='none' class="back-verde-claro">
     
-    <ion-item class="back-verde FuentePrincipal">
+    <ion-item class="FuentePrincipal" color="secondary-contrast">
       <ion-icon name="create" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
       <ion-textarea [(ngModel)]="marca.mensaje" placeholder="Escriba un mensaje a personal"></ion-textarea>
     </ion-item>
 
-    <ion-list>
-      <ion-item>
+    <ion-list lines='none' class="back-verde-claro">
+      <ion-item color="secondary-contrast">
         <ion-icon name="globe" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
-        <ion-label  *ngIf="marca.posicion" class="FuentePrincipal" color="secondary">Posicion obtenida </ion-label>
-        <ion-label *ngIf="!marca.posicion" class="FuentePrincipal" color="secondary">Active GPS </ion-label>
+        <ion-label  *ngIf="marca.posicion && errores.length==0" class="FuentePrincipal" color="secondary">Posicion obtenida </ion-label>
+        <ion-label *ngIf="!marca.posicion && errores.length==0" class="FuentePrincipal" color="secondary">Active GPS </ion-label>
+        <ion-label *ngIf="!marca.posicion && errores.length>0" class="FuentePrincipal" color="secondary">{{errores}} </ion-label>
         <ion-spinner name="lines-small" *ngIf="cargandoGeo"></ion-spinner>
         <ion-toggle slot="end" [(ngModel)]="marca.posicion" (ionChange)="getGeoLocation()"></ion-toggle>
       </ion-item>
@@ -43,8 +44,11 @@
     <ion-col>
         <div class="btn-group" role="group" aria-label="Basic example" >
 
-            <ion-button shape="round" color="secondary"  type="button" class="FuentePrincipal btn btn-secondary" (click)='marcarEntrada()'>Entrada</ion-button>
-            <ion-button shape="round" color="secondary" type="button" class="FuentePrincipal btn btn-secondary" (click)='marcarSalida()'>Salida</ion-button>
+            <ion-button [ngClass]="{'verde-oscuro': marca.tipo=='Entrada', 'verde-claro' :marca.tipo=='Salida' }"
+            shape="round"   type="button" class="FuentePrincipal btn btn-secondary" (click)='marcarEntrada()'>Entrada</ion-button>
+
+            <ion-button [ngClass]="{'verde-oscuro': marca.tipo=='Salida', 'verde-claro' :marca.tipo=='Entrada' }"
+             shape="round" type="button" class="FuentePrincipal btn btn-secondary" (click)='marcarSalida()'>Salida</ion-button>
          
           </div>
     </ion-col>

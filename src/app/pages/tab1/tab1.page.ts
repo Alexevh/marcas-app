@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, AfterContentInit, OnChanges, AfterViewInit } from '@angular/core';
 import { MarcasService } from "../../services/marcas.service";
 import { Router } from "@angular/router";
 import { Geolocation } from "@ionic-native/geolocation/ngx";
@@ -11,9 +11,12 @@ declare var window: any;
   templateUrl: "tab1.page.html",
   styleUrls: ["tab1.page.scss"]
 })
-export class Tab1Page {
+export class Tab1Page   {
+
+
   tempImages: string[] = [];
   cargandoGeo = false;
+  errores = '';
 
   marca = {
     mensaje: "",
@@ -23,12 +26,15 @@ export class Tab1Page {
     estado: 'Enviada'
   };
 
-  constructor(
+   constructor(
     private marcaService: MarcasService,
     private route: Router,
     private geolocation: Geolocation,
     private camera: Camera
-  ) {}
+  ) {
+
+   
+  }
 
   async crearMarca() {
     console.log(this.marca);
@@ -47,7 +53,7 @@ export class Tab1Page {
     this.route.navigateByUrl("/main/tabs/tab2");
   }
 
-  getGeoLocation() {
+   async getGeoLocation() {
     if (!this.marca.posicion) {
       this.marca.coords = null;
       return;
@@ -67,7 +73,7 @@ export class Tab1Page {
         this.marca.coords = coords;
       })
       .catch(error => {
-        console.log("Error getting location", error);
+        this.errores = 'No se pudo obtener la posicion';
         this.cargandoGeo = false;
       });
   }

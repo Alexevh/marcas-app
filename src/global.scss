@@ -53,18 +53,26 @@
 }
 
 
+body{
+    background-color: #f3fdf9 !important;
+}
+
 :root {
     --ion-color-primary: #bae2d2;
     --ion-color-secondary: #6daf94;
-    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast: #f3fdf9;
     --ion-color-secondary-contrast-rgb: 255,255,255;
     --ion-color-secondary-shade: #005a00;
-    --ion-color-secondary-tint: #29550E;
+    --ion-color-secondary-tint: #29550E !important;
   }
 
   .back-verde {
 
     background-color: #bae2d2 !important;
+}
+
+.back-verde-claro {
+    background-color: #f3fdf9 !important;
 }
 
 .relativa {
@@ -77,8 +85,8 @@
 }
 
 .img-chica {
-    width: 50px;
-    height: 50x;;
+    width: 25px;
+    height: 25px;
 }
 
 .estado-sobre {
@@ -90,8 +98,8 @@
 
 .titulo-sobre {
     position: relative;
-    top: -20px;
-    left: -10px;
+    top: -10px;
+    left: -1px;
     margin-bottom: -5px;
 }
 
@@ -117,3 +125,4 @@ personalizadas o las sobreescribe*/
 .margen-35 {
    margin-left: 35%;
 }
+

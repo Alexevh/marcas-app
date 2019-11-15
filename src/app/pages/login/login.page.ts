@@ -18,14 +18,14 @@ export class LoginPage implements OnInit {
   /* elemto que voy a usar para mandar la data a los servicios , me sirve por que cada uno de estos variables internas las ato a un 
 elemento del formulario*/
 loginUser = {
-  email: 'prueba@prueba.com',
-  password: '123456'
+  email: '',
+  password: ''
 };
 
 registerUser: Usuario = {
   email: '',
-  password: '123456',
-  nombre: 'Test',
+  password: '',
+  nombre: '',
   avatar: 'av-1.png',
   direccion: ''
 };

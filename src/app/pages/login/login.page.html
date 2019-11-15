@@ -1,12 +1,15 @@
-<ion-content>
 
+<ion-content color="secondary-contrast">
 
-  <ion-slides class="mainSlide" #Slideprincipal>
+  <div class="verde-claro">
+
+ 
+  <ion-slides class="mainSlide  back-verde-claro" #Slideprincipal>
     
-    <ion-slide>
+    <ion-slide class="back-verde-claro">
 
       <form (ngSubmit)="login(flogin)" #flogin="ngForm">
-        <ion-grid fixed>
+        <ion-grid fixed >
 
           <ion-row>
             <ion-col>
@@ -15,34 +18,40 @@
           </ion-row>
         
           <ion-row>
-            <ion-col>
+            <ion-col class="back-verde-claro">
               
-                <ion-list>
+                <ion-list class="back-verde-claro" lines='none'> 
                   
-                  <ion-item >
-                    <!-- <ion-label>Email</ion-label> --> 
+                  <ion-item   color="secondary-contrast"  >
                     
-                  
-                    <ion-input name="email"
-                                type="email"
-                                class="back-verde FuentePrincipal"
-                                [(ngModel)]="loginUser.email"
-                                
-                                required>
-                                <ion-icon name="mail" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
-                              </ion-input>
-                  </ion-item>
+                      <!-- <ion-label>Email</ion-label> --> 
+                      
+                    
+                      <ion-input name="email"
+                                  type="email"
+                                  class="back-verde FuentePrincipal"
+                                  [(ngModel)]="loginUser.email"
+                                  color="secondary-contrast"
+                                 
+                                  required>
+                                  <ion-icon name="mail" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
+                                </ion-input>
+                    
+                  </ion-item >
+                 
 
-                  <ion-item>
+                  <ion-item  color="secondary-contrast">
                     <!--<ion-label>Password</ion-label> -->
                     
                     <ion-input name="password"
+                    class="back-verde FuentePrincipal"
+                               color="secondary-contrast"
                                 type="password"
                                 [(ngModel)]="loginUser.password"
-                                class="back-verde FuentePrincipal"
+                                
                                 required>
-                                <ion-icon name="key" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
-                  </ion-item>
+                                <ion-icon  name="key" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
+                  </ion-item >
 
                 </ion-list>
             </ion-col>
@@ -82,7 +91,7 @@
 
     </ion-slide>
 
-    <ion-slide>
+    <ion-slide class="back-verde-claro">
 
       
       <ion-grid fixed>
@@ -116,7 +125,7 @@ meter el contenido en la variable del js que controla la pagina
             </ion-col>
             </ion-row>-->
             
-            <form (ngSubmit)="registro(fregistro)" #fregistro="ngForm">
+            <form (ngSubmit)="registro(fregistro)" #fregistro="ngForm" color="secondary-contrast">
               <h3 class="FuentePrincipal">Nuevo usuario</h3>
                 <ion-row>
                     <ion-col>
@@ -124,45 +133,50 @@ meter el contenido en la variable del js que controla la pagina
                     </ion-col>
                   </ion-row>
                 <ion-row>
-                    <ion-col>
+                    <ion-col class="back-verde-claro">
                         
-                        <ion-list>
+                        <ion-list  class="back-verde-claro" lines='none'> 
                             
-                            <ion-item>            
+                            <ion-item color="secondary-contrast">            
                             <ion-input name="email" 
                                         type="email"
                                         class="back-verde FuentePrincipal"
                                         [(ngModel)]="registerUser.email"
+                                        color="secondary-contrast"
+                                        placeholder="Ingrese mail"
                                         required>
                                         <ion-icon name="mail" slot="start" class="verde-claro icon-large espaciado"></ion-icon>
                                       </ion-input>
                             </ion-item>
 
-                            <ion-item>
+                            <ion-item color="secondary-contrast">
                             
                             <ion-input name="nombre"
                                         type="text"
                                         class="back-verde FuentePrincipal"
                                         [(ngModel)]="registerUser.nombre"
+                                        placeholder="Ingrese su nombre"
                                         required>
                                         <ion-icon name="contact" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                             </ion-item>
 
-                            <ion-item>                         
+                            <ion-item color="secondary-contrast">                          
                             <ion-input name="password"
                                         type="password"
                                         class="back-verde"
                                         [(ngModel)]="registerUser.password"
+                                        placeholder="Ingrese su password"
                                         required>
                                         <ion-icon name="key" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                             </ion-item>
 
-                            <ion-item>
+                            <ion-item color="secondary-contrast">
                               
                               <ion-input name="direccion"
                                           type="text"
                                           class="back-verde FuentePrincipal"
                                           [(ngModel)]="registerUser.direccion"
+                                          placeholder="Ingrese su direccion postal"
                                           required>
                                           <ion-icon name="home" slot="start" class="verde-claro icon-large espaciado"></ion-icon></ion-input>
                               </ion-item>
@@ -210,11 +224,11 @@ meter el contenido en la variable del js que controla la pagina
   </ion-slides>
 
 
-
+</div>
 </ion-content>
 
 
-<ion-footer no-border>
+<ion-footer no-border class="back-verde-claro">
 
   <!-- 
 
@@ -252,3 +266,4 @@ meter el contenido en la variable del js que controla la pagina
   -->
 
 </ion-footer>
+
