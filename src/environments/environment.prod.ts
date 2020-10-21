@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: 'https://marcas-server.herokuapp.com'
+  url: 'https://marcas-server-socket.herokuapp.com'
 };

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://marcas-server.herokuapp.com'
+  url: 'https://marcas-server-socket.herokuapp.com'
 };
 
 /*

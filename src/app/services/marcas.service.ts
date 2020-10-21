@@ -51,7 +51,7 @@ export class MarcasService  {
     
 
     return this.http.get<RespuestaMarcas>(
-      `${URL}/marca/?pagina=${this.paginaMarcas}`,
+      `${URL}/marcas/?pagina=${this.paginaMarcas}`,
       { headers }
     );
   }
@@ -65,7 +65,7 @@ export class MarcasService  {
 
     return new Promise( resolve => {
 
-      this.http.post(`${ URL }/marca`, marca, { headers })
+      this.http.post(`${ URL }/marcas`, marca, { headers })
         .subscribe( resp => {
 
           this.nuevaMarca.emit( resp['marca'] );
@@ -89,7 +89,7 @@ export class MarcasService  {
 
     const fileTransfer: FileTransferObject = this.fileTransfer.create();
 
-    fileTransfer.upload( img, `${ URL }/marca/upload`, options )
+    fileTransfer.upload( img, `${ URL }/marcas/upload`, options )
       .then( data => {
         console.log(data);
       }).catch( err => {

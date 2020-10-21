@@ -32,7 +32,7 @@ export class UsuarioService {
     const data = { email, password };
 
     /* hacemos la llamada post y nos suscribimos */
-    this.http.post(`${URL}/user/login`, data).subscribe(async resp => {
+    this.http.post(`${URL}/login`, data).subscribe(async resp => {
       /* si ok viene en true */
       if (resp["ok"]) {
         await this.guardarToken(resp["token"]);
